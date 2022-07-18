@@ -1,0 +1,200 @@
+#search {
+  position: absolute;
+  z-index: 1;
+  width: 33%;
+  min-width: 440px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 0 40px;
+  color: $lightgray;
+  background: $navy;
+
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    height: 200px;
+    line-height: 200px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    font-size: 80px;
+    letter-spacing: -3px;
+    font-weight: bold;
+    color: #FFF;
+    text-shadow: 1px 2px 0px rgba(0,0,0,0.2);
+    transition: 1s;
+}
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h3 {
+    margin: 35px 0;
+    font-size: 24px;
+  }
+
+  #search-box {
+    position: relative;
+    width: 80%;
+    margin-left: 10%;
+
+    input {
+      width: 100%;
+      background: transparent;
+      border: none;
+      outline: none;
+      padding: 8px;
+      font-size: 24px;
+      color: $white;
+      border-bottom: 3px solid $blue;
+      transition: 500ms;
+
+      &:hover {
+        background: darken($navy, 2%);
+        transition: 250ms;
+      }
+    }
+
+    .suggestions {
+      position: absolute;
+      width: 100%;
+      z-index: 2;
+
+      .suggestion {
+        padding: 12px;
+        background: darken($navy, 2%);
+        border-bottom: 1px solid darken($navy, 4%);
+        cursor: pointer;
+
+        &:last-child {
+          border-bottom: 0;
+        }
+
+        &:hover, &.highlighted {
+          background: darken($blue, 20%);
+        }
+
+        &.confirmed {
+          background: darken($green, 10%);
+        }
+      }
+    }
+
+    .typeahead-loading {
+      position: absolute;
+      right: 13px;
+      top: 13px;
+    }
+  }
+
+  #recent-searches {
+    position: relative;
+    padding: 1.5rem 1rem;
+    margin-top: 1rem;
+    cursor: default;
+
+    .heading {
+      color: $yellow;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    li {
+      display: inline-block;
+      padding: 6px 6px 6px 0;
+      animation-name: fadeRecentItem;
+      animation-duration: 500ms;
+      animation-fill-mode: backwards;
+
+      &.faded {
+        opacity: 0;
+        transition: opacity 1000ms ease-out;
+      }
+    }
+
+    @for $i from 1 through 12 {
+      li:nth-child(#{$i})  { animation-delay: #{$i * 90}ms }
+    }
+
+    a {
+      position: relative;
+      cursor: pointer;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 4px;
+        right: 4px;
+        bottom: -2px;
+        height: 2px;
+        background: $green;
+        transform: translateY(3px);
+        opacity: 0;
+        transition: 400ms ease-out;
+      }
+
+      &:hover {
+        &:before {
+          transform: translateY(0);
+          opacity: 1;
+          transition: 150ms ease-out;
+        }
+      }
+
+    }
+  }
+}
+
+@keyframes fadeRecentItem {
+    from  {
+      opacity: 0.01;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+.recent-searches-enter {
+  opacity: 0.01;
+  transform: translateY(12px);
+}
+.recent-searches-enter.recent-searches-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 1500ms;
+}
+.recent-searches-leave {
+  opacity: 1;
+}
+.recent-searches-leave.recent-searches-leave-active {
+  opacity: 0;
+  transition: 1000ms linear;
+}
+
+
+.search-animation-enter, .search-animation-appear {
+  opacity: 0.01;
+}
+.search-animation-enter.search-animation-enter-active, .search-animation-appear.search-animation-appear-active {
+  opacity: 1;
+  transition: 500ms ease-in;
+}
+.search-animation-leave {
+  opacity: 1;
+}
+.search-animation-leave.search-animation-leave-active {
+  opacity: 0;
+  transition: 1000ms;
+}

@@ -1,0 +1,77 @@
+@import '../../node_modules/react-activity/lib/Spinner/Spinner.css';
+@import '../../node_modules/react-activity/lib/Sentry/Sentry.css';
+
+@import 'variables';
+@import 'reset';
+
+@import 'artist-avatar';
+@import 'footer';
+@import 'full-screen-error';
+@import 'github-link';
+@import 'graph';
+@import 'restart';
+@import 'search';
+@import 'samples';
+
+
+html, body, #render-target, #layout {
+  height: 100%;
+}
+
+body, input, select, option, textarea {
+  font-family: "brandon-grotesque", sans-serif;
+}
+
+#layout {
+  &.wrapped-for-devtools {
+    width: 70%;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $white;
+}
+
+.mono {
+  font-family: monospace;
+}
+
+.background {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+
+  @media ( min-width: 760px ) and ( orientation: landscape ) {
+
+    div {
+      flex: 1;
+    }
+
+    // past
+    div:nth-of-type(1) {
+      background: lighten($navy, 2%);
+    }
+
+    // present
+    div:nth-of-type(2) {
+      background: $navy;
+    }
+
+    // future
+    div:nth-of-type(3) {
+      background: darken($navy, 2%);;
+    }
+  }
+}
+
+// This is used by samples.scss and artist-avatar.scss.
+// TODO: Make its size dynamic
+.node-spacer {
+  width: 100%;
+  height: 225px + 250px;
+}

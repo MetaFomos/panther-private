@@ -1,0 +1,10 @@
+{
+  "rethinkdb": {
+      "host": "763cbe0d-32a5-4a58-80ff-2c82200c02fa.db.rdb.rethinkdb.cloud",
+      "port": 28015,
+      "username": "763cbe0d-32a5-4a58-80ff-2c82200c02fa",
+      "password": "39ba02295d48b361de42e59700ca9cc225f85370",
+      "db": "panther"
+  },
+  "port": 8001
+}

@@ -1,0 +1,19 @@
+2022-07-13T13:32:43.649670000 0.034368s notice: Recursively removing directory /Users/adrien/Desktop/projects/panther/rethinkdb_data/tmp
+2022-07-13T13:32:43.655620000 0.040318s notice: Initializing directory /Users/adrien/Desktop/projects/panther/rethinkdb_data
+2022-07-13T13:32:43.655737000 0.040436s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/Users/adrien/Desktop/projects/panther/rethinkdb_data' did not already exist or is empty.)
+2022-07-13T13:32:43.655791000 0.040489s notice: Running rethinkdb 2.4.2 (CLANG 13.1.6 (clang-1316.0.21.2))...
+2022-07-13T13:32:43.664978000 0.049679s notice: Running on Darwin 21.4.0 arm64
+2022-07-13T13:32:43.665034000 0.049733s notice: Loading data from directory /Users/adrien/Desktop/projects/panther/rethinkdb_data
+2022-07-13T13:32:43.972670000 0.357385s info: Automatically using cache size of 232 MB
+2022-07-13T13:32:43.972988000 0.357703s notice: Listening for intracluster connections on port 29015
+2022-07-13T13:32:43.973665000 0.358380s notice: Listening for client driver connections on port 28015
+2022-07-13T13:32:43.973688000 0.358402s notice: Listening for administrative HTTP connections on port 8080
+2022-07-13T13:32:43.973689000 0.358404s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2022-07-13T13:32:43.973690000 0.358405s notice: Listening on driver addresses: 127.0.0.1, ::1
+2022-07-13T13:32:43.973691000 0.358406s notice: Listening on http addresses: 127.0.0.1, ::1
+2022-07-13T13:32:43.973693000 0.358407s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2022-07-13T13:32:43.973695000 0.358409s notice: Server ready, "Adriens_MacBook_Pro_local_1nm" 586c0c7e-9803-451e-8bf7-58a52b12fb83
+2022-07-13T13:33:07.695884000 24.081796s info: Table ca6814cb-47f4-4785-9fa3-560cb4feb058: Starting a new Raft election for term 1.
+2022-07-13T13:33:07.696041000 24.081953s info: Table ca6814cb-47f4-4785-9fa3-560cb4feb058: Added replica on this server.
+2022-07-13T13:33:07.730297000 24.116210s info: Table ca6814cb-47f4-4785-9fa3-560cb4feb058: This server is Raft leader for term 1. Latest log index is 0.
+2022-07-13T13:33:09.180665000 25.566651s info: Table ca6814cb-47f4-4785-9fa3-560cb4feb058: Configuration is changing.
